@@ -18,17 +18,19 @@ def end():
 #     print('Расчет дальше')
 
 def  get_numbers():
-    exp = int(input("Введите выражение: "))
+    exp = (input("Введите выражение: "))
     return exp
 
-def calculate(a: float, b: float, operator: str):
-    if operator == "+":
+
+
+def calculate(a, b, oper):
+    if oper == "+":
         result = a + b
-    elif operator == "-":
+    elif oper == "-":
         result = a - b
-    elif operator == "*":
+    elif oper == "*":
         result = a * b
-    elif operator == "/":
+    elif oper == "/":
         if b != 0:
             return a / b
         else:
@@ -46,10 +48,10 @@ def main():
         exp = get_numbers()
 
     # Запрос операции
-        operation = oper(exp)
+        a,b,oper = operation(exp)
 
     # Вычисление
-        result = calculate(first, second, oper)
+        result = calculate(a, b, oper)
 
     # Вывод результат
         display(result)
