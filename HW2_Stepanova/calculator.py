@@ -37,18 +37,27 @@ def calculate(a: float, b: float, operator: str):
         result = "Я умею только складывать, вычитать, умножать и делить"
     return result
 
+def display(result):
+    print("Результат: ", result)
+
 def main():
+     while True:
     # Получение чисел
-    exp = get_numbers()
+        exp = get_numbers()
 
     # Запрос операции
-    operation = oper(exp)
+        operation = oper(exp)
 
     # Вычисление
-    result = calculate(first, second, oper)
+        result = calculate(first, second, oper)
 
     # Вывод результат
-    display(result)
+        display(result)
+
+    #Реализует функцию end()
+        if end():
+            print('Конец программы')
+            break
 
 if __name__ == "__main__":
-    run()
+    main()
