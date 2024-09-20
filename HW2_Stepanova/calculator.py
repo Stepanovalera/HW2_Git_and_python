@@ -1,11 +1,5 @@
 
-
-def  get_numbers():
-    exp = int(input("Введите выражение: "))
-    return exp
-
-# ОБЪЯВЛЯЮ ФУНКЦИЮ calc()
-def calc(a: float, b: float, operator: str):
+def calculate(a: float, b: float, operator: str):
     if operator == "+":
         result = a + b
     elif operator == "-":
@@ -21,9 +15,18 @@ def calc(a: float, b: float, operator: str):
         result = "Я умею только складывать, вычитать, умножать и делить"
     return result
 
-# РАСЧЁТ И ВЫВОД ОТВЕТА
-result = calc(a, b, operator)
+def main():
+    # Получение чисел
+    exp = get_numbers()
 
-# Вывод результата
-print(f"Результат: {result}")
+    # Запрос операции
+    operation = oper(exp)
 
+    # Вычисление
+    result = calculate(first, second, oper)
+
+    # Вывод результат
+    display(result)
+
+if __name__ == "__main__":
+    run()
