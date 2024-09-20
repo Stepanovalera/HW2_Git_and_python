@@ -1,4 +1,8 @@
 
+def  get_numbers():
+    exp = int(input("Введите выражение: "))
+    return exp
+
 def calculate(a: float, b: float, operator: str):
     if operator == "+":
         result = a + b
